@@ -1,22 +1,37 @@
+/* Write your CSS here */
 .suggestion-items {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 0px;
-  padding-right: 10px;
-  cursor: pointer;
+  margin-top: 16px;
   list-style-type: none;
 }
 .suggestion-txt {
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'Roboto';
   color: #475569;
-  padding-left: 0px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin: 0;
 }
+@media screen and (min-width: 768px) {
+  .suggestion-txt {
+    font-size: 20px;
+  }
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .arrow {
-  width: 30px;
-  height: 30px;
+  height: 16px;
+  width: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .arrow {
+    height: 24px;
+    width: 24px;
+  }
 }
