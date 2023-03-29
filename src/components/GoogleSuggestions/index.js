@@ -1,3 +1,4 @@
+// Write your code here
 import {Component} from 'react'
 import './index.css'
 import SuggestionItem from '../SuggestionItem'
@@ -16,7 +17,7 @@ class GoogleSuggestions extends Component {
   }
 
   render() {
-    const {suggestionsList} = this.Props
+    const {suggestionsList} = this.props
     const {searchInput} = this.state
     const searchResult = suggestionsList.filter(eachSuggestion =>
       eachSuggestion.suggestion
@@ -32,20 +33,22 @@ class GoogleSuggestions extends Component {
             alt="google logo"
             className="google-logo"
           />
-          <div className="search-input-container">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/google-search-icon.png"
-              alt="search icon"
-              className="search-icon"
-            />
-            <input
-              type="search"
-              placeholder="Search Google"
-              value={searchInput}
-              onChange={this.onChangeInput}
-              className="input-search"
-            />
-            <ul className="search-input-list-container">
+          <div className="search-input-suggestions-container">
+            <div className="search-input-container">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/google-search-icon.png"
+                alt="search icon"
+                className="search-icon"
+              />
+              <input
+                type="search"
+                placeholder="Search Google"
+                value={searchInput}
+                onChange={this.onChangeInput}
+                className="input-search"
+              />
+            </div>
+            <ul className="suggestions-list">
               {searchResult.map(eachSearch => (
                 <SuggestionItem
                   key={eachSearch.id}
